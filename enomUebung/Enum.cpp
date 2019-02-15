@@ -2,38 +2,66 @@
 #include <string>
 
 enum Namen {
-	BERND =1, // start bei 1 statt 0
-	KLAUS,
+	DIGIMON = 1, // start bei 1 statt 0
+	POKEMON,
 	QPIE,
 };
 
-std::string Ausgabe(int eingabe)
+struct Attribute {
+	Namen Typ;
+	int Alter;
+	int HP;
+};
+
+std::string Ausgabe(int eingabe, Attribute werte)
 {
-	if (eingabe == KLAUS)
+	if (werte.Typ == Namen::DIGIMON)
 	{
-		return "Klaus wurde gewaehlt!";
+		return "Ein Digimon wurde gewaehlt!\n";
 	}
-	else if (eingabe == BERND)
+	else if (werte.Typ == Namen::POKEMON)
 	{
-		return "Bernd wurde gewaehlt!";
+		return "Ein Pokemon wurde gewaehlt!\n";
 	}
-	else if (eingabe == QPIE)
+	else if (werte.Typ == Namen::QPIE)
 	{
-		return "QPIE wurde gewaehlt!";
+		return "QPIE wurde gewaehlt!\n";
 	}
 	else
 	{
-		return "Garnichts!!";
+		return "1,2 oder 3 habe ich gesagt!\n";
 	}
 }
 
 int main()
 {
+	Attribute Digimon{ Namen::DIGIMON,90,200 };
+	Attribute Pokemon{ Namen::POKEMON,3,50 };
+	Attribute Qpie{ Namen::QPIE,9000, 1 };
+
 	int eingabe{ 0 };
-	std::cout << "Gebe ein (1)Bernd (2)Klaus (3)QPIE: ";
+	std::cout << "Gebe ein (1)Digimon (2)Pokemon (3)QPIE: ";
 	std::cin >> eingabe;
 
-	std::cout<< Ausgabe(eingabe);
-	
+	if (eingabe == 1)
+	{
+		std::cout << Ausgabe(eingabe, Digimon);
+		std::cout << "Es hat die Werte :" << Digimon.Alter << " Jahre alt. " << Digimon.HP << " HP.\n";
+	}
+	else if (eingabe == 2)
+	{
+		std::cout << Ausgabe(eingabe, Pokemon);
+		std::cout << "Es hat die Werte :" << Pokemon.Alter << " Jahre alt. " << Pokemon.HP << " HP.\n";
+	}
+	else if (eingabe == 3)
+	{
+		std::cout << Ausgabe(eingabe, Qpie);
+		std::cout << "Es hat die Werte :" << Qpie.Alter << " Jahre alt. " << Qpie.HP << " HP.\n";
+	}
+	else
+	{
+		std::cout << "1,2 oder 3 habe ich gesagt!\n";
+	}
+
 	return 0;
 }
