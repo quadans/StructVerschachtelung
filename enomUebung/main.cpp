@@ -1,4 +1,6 @@
-/*#include <iostream>
+//Mit Verschachtelung
+
+#include <iostream>
 #include <string>
 
 struct Daten {
@@ -20,4 +22,4 @@ int main()
 	std::cout << "Postleitzahl: " << Peter_s.Peter.Postleitzahl << "\n";
 	std::cout << "Stadt: " << Peter_s.Peter.Stadt << "\n";
 	return 0;
-}*/
+}
