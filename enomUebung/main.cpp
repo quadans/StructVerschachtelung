@@ -1,4 +1,4 @@
-//Mit Verschachtelung
+/*//Mit Verschachtelung
 
 #include <iostream>
 #include <string>
@@ -23,3 +23,4 @@ int main()
 	std::cout << "Stadt: " << Peter_s.Peter.Stadt << "\n";
 	return 0;
 }
+*/
