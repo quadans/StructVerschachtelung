@@ -1,5 +1,5 @@
 // Ohne Verschachtelung
-
+/*
 #include <iostream>
 #include <string>
 
@@ -10,18 +10,20 @@ struct Daten {
 	std::string Stadt;
 };
 
+void Ausgabe(Daten werte)
+{
+	std::cout << "Alter: " << werte.Alter << "\n";
+	std::cout << "Name: " << werte.Name << "\n";
+	std::cout << "Postleitzahl: " << werte.Postleitzahl << "\n";
+	std::cout << "Stadt: " << werte.Stadt << "\n";
+}
+
 int main()
 {
 	Daten Peter_s{ 23,"Peter",46485,"Wesel" };
-	std::cout << "Alter: " << Peter_s.Alter << "\n";
-	std::cout << "Name: " << Peter_s.Name << "\n";
-	std::cout << "Postleitzahl: " << Peter_s.Postleitzahl << "\n";
-	std::cout << "Stadt: " << Peter_s.Stadt << "\n";
-
+	Ausgabe(Peter_s);
 	Daten Hans{ 25,"Hans",46185,"Axa" };
-	std::cout << "Alter: " << Hans.Alter << "\n";
-	std::cout << "Name: " << Hans.Name << "\n";
-	std::cout << "Postleitzahl: " << Hans.Postleitzahl << "\n";
-	std::cout << "Stadt: " << Hans.Stadt << "\n";
+	Ausgabe(Hans);
+
 	return 0;
-}
+}*/
